@@ -1,0 +1,9 @@
+Coloque aqui a logo do SENAI Hub sem fundo preto com o nome:
+
+logo-senai-hub.webp
+
+Caminho esperado:
+
+assets/logo-senai-hub.webp
+
+Se a logo não estiver presente, o app continuará funcionando, apenas sem exibir a imagem no topo.
