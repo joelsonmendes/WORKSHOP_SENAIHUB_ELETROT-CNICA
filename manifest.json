@@ -1,0 +1,16 @@
+{
+  "name": "Aulão Prático - Fundamentos de Sistemas Elétricos",
+  "short_name": "Aulão Elétrico",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#005baa",
+  "description": "Laboratório digital SENAI Hub para práticas de fundamentos de sistemas elétricos.",
+  "icons": [
+    {
+      "src": "assets/logo-senai-hub.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    }
+  ]
+}
