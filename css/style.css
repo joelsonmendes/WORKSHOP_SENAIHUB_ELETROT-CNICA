@@ -1,0 +1,294 @@
+:root {
+  --azul-senai: #005baa;
+  --azul-tech: #00a3ff;
+  --azul-escuro: #002b55;
+  --cinza-claro: #f4f7fb;
+  --texto: #1f2937;
+  --branco: #ffffff;
+  --verde: #16a34a;
+  --amarelo: #facc15;
+  --vermelho: #dc2626;
+  --laranja: #f97316;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cinza-claro);
+  color: var(--texto);
+}
+
+.topo {
+  background: linear-gradient(135deg, var(--azul-senai), var(--azul-escuro));
+  color: var(--branco);
+  text-align: center;
+  padding: 28px 16px;
+}
+
+.logo {
+  max-width: 190px;
+  max-height: 90px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.topo h1 {
+  margin: 8px 0 4px;
+  font-size: 2rem;
+}
+
+.topo p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.92;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 24px auto;
+}
+
+.card {
+  background: var(--branco);
+  border: 2px solid var(--azul-senai);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(0, 91, 170, 0.12);
+}
+
+.destaque {
+  text-align: center;
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.menu-card {
+  background: var(--branco);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 18px;
+  text-decoration: none;
+  color: var(--texto);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.menu-card:hover {
+  border-color: var(--azul-tech);
+  transform: translateY(-4px);
+}
+
+.menu-card span {
+  display: inline-block;
+  background: var(--azul-senai);
+  color: var(--branco);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.menu-card h3 {
+  margin: 8px 0;
+  color: var(--azul-senai);
+}
+
+.menu-card p {
+  font-size: 0.95rem;
+}
+
+.rodape {
+  text-align: center;
+  padding: 18px;
+  color: #555;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.campo label {
+  font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+button,
+.botao {
+  background: var(--azul-senai);
+  color: var(--branco);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+.botao:hover {
+  background: var(--azul-escuro);
+}
+
+.botao-secundario {
+  background: #334155;
+}
+
+.resultado {
+  background: #eef6ff;
+  border-left: 5px solid var(--azul-senai);
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.alerta {
+  background: #fff7ed;
+  border-left: 5px solid var(--laranja);
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.sucesso {
+  background: #ecfdf5;
+  border-left: 5px solid var(--verde);
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.tabela th,
+.tabela td {
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela th {
+  background: #e0f2fe;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #cbd5e1;
+  margin: 16px 0;
+}
+
+canvas {
+  width: 100%;
+  max-width: 760px;
+  height: 260px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--azul-senai);
+  color: white;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 950px) {
+  .grid-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid,
+  .form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .topo h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    max-width: 145px;
+  }
+}
+
+@media print {
+  .botoes,
+  .botao,
+  button,
+  .rodape {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .topo {
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+  }
+}
