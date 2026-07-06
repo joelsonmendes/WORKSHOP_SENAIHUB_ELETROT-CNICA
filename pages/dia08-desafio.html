@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 8 - Desafio Integrador</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topo">
+  <img src="../assets/logo-senai-hub.webp" alt="SENAI Hub" class="logo" onerror="this.style.display='none'">
+  <h1>Dia 8 — Desafio Integrador</h1>
+  <p>Diagnóstico Final — Sistema Elétrico em Análise</p>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Situação-problema</h2>
+    <p>Uma instalação possui carga indutiva, baixo fator de potência, corrente elevada e suspeita de problema de isolamento. A equipe deve medir, interpretar, corrigir e apresentar um diagnóstico técnico.</p>
+  </section>
+
+  <section class="card">
+    <h2>Dados coletados</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Nome da equipe</label>
+        <input id="equipe" type="text">
+      </div>
+      <div class="campo">
+        <label>Tipo de carga</label>
+        <select id="tipoCarga">
+          <option>Indutiva</option>
+          <option>Resistiva</option>
+          <option>Capacitiva</option>
+          <option>Mista</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label>Tensão medida em V</label>
+        <input id="tensao" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Corrente medida em A</label>
+        <input id="corrente" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>FP inicial</label>
+        <input id="fpInicial" type="number" step="0.01" value="0.75">
+      </div>
+      <div class="campo">
+        <label>FP desejado</label>
+        <input id="fpDesejado" type="number" step="0.01" value="0.95">
+      </div>
+      <div class="campo">
+        <label>Resistência de isolamento em MΩ</label>
+        <input id="isolamento" type="number" step="0.01">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Falha encontrada</label>
+      <textarea id="falha"></textarea>
+    </div>
+
+    <div class="campo">
+      <label>Solução proposta</label>
+      <textarea id="solucao"></textarea>
+    </div>
+
+    <div class="botoes">
+      <button onclick="calcularDia08()">Gerar diagnóstico</button>
+      <button onclick="salvarDia08()">Salvar</button>
+      <button onclick="window.print()">Imprimir/PDF</button>
+      <a href="../index.html" class="botao">Voltar</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Relatório final</h2>
+    <div id="resultado" class="resultado">Preencha os campos e clique em gerar diagnóstico.</div>
+  </section>
+</main>
+
+<script src="../js/utils.js"></script>
+<script src="../js/dia08.js"></script>
+</body>
+</html>

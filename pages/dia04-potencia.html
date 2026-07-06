@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 4 - Potência em CA</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topo">
+  <img src="../assets/logo-senai-hub.webp" alt="SENAI Hub" class="logo" onerror="this.style.display='none'">
+  <h1>Dia 4 — Potência em CA</h1>
+  <p>PowerCA — Triângulo de Potência</p>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Objetivo da prática</h2>
+    <p>Calcular potência aparente, ativa, reativa, ângulo de defasagem e classificar o fator de potência.</p>
+  </section>
+
+  <section class="card">
+    <h2>Dados da carga</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Nome da equipe</label>
+        <input id="equipe" type="text">
+      </div>
+      <div class="campo">
+        <label>Tipo de carga</label>
+        <select id="tipoCarga">
+          <option>Resistiva</option>
+          <option>Indutiva</option>
+          <option>Capacitiva</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label>Tensão em V</label>
+        <input id="tensao" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Corrente em A</label>
+        <input id="corrente" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Fator de potência</label>
+        <input id="fp" type="number" step="0.01" min="0" max="1" value="0.8">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Observação</label>
+      <textarea id="observacao"></textarea>
+    </div>
+
+    <div class="botoes">
+      <button onclick="calcularDia04()">Calcular</button>
+      <button onclick="salvarDia04()">Salvar</button>
+      <button onclick="window.print()">Imprimir/PDF</button>
+      <a href="../index.html" class="botao">Voltar</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado</h2>
+    <div id="resultado" class="resultado">Preencha os campos e clique em calcular.</div>
+  </section>
+</main>
+
+<script src="../js/utils.js"></script>
+<script src="../js/dia04.js"></script>
+</body>
+</html>

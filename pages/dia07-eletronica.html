@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 7 - Eletrônica Aplicada</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topo">
+  <img src="../assets/logo-senai-hub.webp" alt="SENAI Hub" class="logo" onerror="this.style.display='none'">
+  <h1>Dia 7 — Eletrônica Aplicada</h1>
+  <p>EletroBasic — LED, Diodos, Retificação e Zener</p>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Dados gerais</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Nome da equipe</label>
+        <input id="equipe" type="text">
+      </div>
+      <div class="campo">
+        <label>Módulo</label>
+        <select id="modulo">
+          <option>LED com resistor</option>
+          <option>Retificação monofásica</option>
+          <option>Retificação trifásica</option>
+          <option>Regulador Zener</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>LED com resistor</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Tensão da fonte em V</label>
+        <input id="vFonte" type="number" step="0.01" value="12">
+      </div>
+      <div class="campo">
+        <label>Tensão do LED em V</label>
+        <input id="vLed" type="number" step="0.01" value="2">
+      </div>
+      <div class="campo">
+        <label>Corrente desejada em mA</label>
+        <input id="iLed" type="number" step="0.01" value="20">
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Retificação / Zener</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Tensão CA RMS em V</label>
+        <input id="vca" type="number" step="0.01" value="12">
+      </div>
+      <div class="campo">
+        <label>Tipo de retificação</label>
+        <select id="retificacao">
+          <option>Meia onda</option>
+          <option>Onda completa</option>
+          <option>Trifásica</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label>Queda por diodo em V</label>
+        <input id="quedaDiodo" type="number" step="0.01" value="0.7">
+      </div>
+      <div class="campo">
+        <label>Tensão Zener em V</label>
+        <input id="vZener" type="number" step="0.01" value="5.1">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Observação</label>
+      <textarea id="observacao"></textarea>
+    </div>
+
+    <div class="botoes">
+      <button onclick="calcularDia07()">Calcular</button>
+      <button onclick="salvarDia07()">Salvar</button>
+      <button onclick="window.print()">Imprimir/PDF</button>
+      <a href="../index.html" class="botao">Voltar</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado</h2>
+    <div id="resultado" class="resultado">Preencha os campos e clique em calcular.</div>
+  </section>
+</main>
+
+<script src="../js/utils.js"></script>
+<script src="../js/dia07.js"></script>
+</body>
+</html>

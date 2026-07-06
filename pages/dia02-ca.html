@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 2 - Corrente Alternada</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topo">
+  <img src="../assets/logo-senai-hub.webp" alt="SENAI Hub" class="logo" onerror="this.style.display='none'">
+  <h1>Dia 2 — Corrente Alternada</h1>
+  <p>CA Lab — Valor RMS, Pico, Frequência e Período</p>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Objetivo da prática</h2>
+    <p>Comparar valor eficaz, valor de pico, frequência e período de uma onda senoidal.</p>
+  </section>
+
+  <section class="card">
+    <h2>Dados da medição</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Nome da equipe</label>
+        <input id="equipe" type="text">
+      </div>
+      <div class="campo">
+        <label>Tipo de rede</label>
+        <select id="rede">
+          <option>127 V</option>
+          <option>220 V</option>
+          <option>380 V</option>
+          <option>Outra</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label>Tensão RMS medida em V</label>
+        <input id="vrms" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Frequência em Hz</label>
+        <input id="frequencia" type="number" step="0.01" value="60">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Observação</label>
+      <textarea id="observacao"></textarea>
+    </div>
+
+    <div class="botoes">
+      <button onclick="calcularDia02()">Calcular</button>
+      <button onclick="salvarDia02()">Salvar</button>
+      <button onclick="desenharOnda()">Desenhar onda</button>
+      <button onclick="window.print()">Imprimir/PDF</button>
+      <a href="../index.html" class="botao">Voltar</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Gráfico didático</h2>
+    <canvas id="canvas" width="760" height="260"></canvas>
+  </section>
+
+  <section class="card">
+    <h2>Resultado</h2>
+    <div id="resultado" class="resultado">Preencha os campos e clique em calcular.</div>
+  </section>
+</main>
+
+<script src="../js/utils.js"></script>
+<script src="../js/dia02.js"></script>
+</body>
+</html>

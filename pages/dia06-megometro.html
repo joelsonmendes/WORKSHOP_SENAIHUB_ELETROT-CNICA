@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia 6 - Megômetro</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topo">
+  <img src="../assets/logo-senai-hub.webp" alt="SENAI Hub" class="logo" onerror="this.style.display='none'">
+  <h1>Dia 6 — Ensaio com Megômetro</h1>
+  <p>MegaCheck — Diagnóstico de Isolação</p>
+</header>
+
+<main class="container">
+  <section class="alerta">
+    <h3>Atenção obrigatória</h3>
+    <p>Nunca realizar ensaio com megômetro em circuito energizado. Desconecte cargas eletrônicas sensíveis e descarregue o circuito após o teste.</p>
+  </section>
+
+  <section class="card">
+    <h2>Dados do ensaio</h2>
+    <div class="form-grid">
+      <div class="campo">
+        <label>Nome da equipe</label>
+        <input id="equipe" type="text">
+      </div>
+      <div class="campo">
+        <label>Equipamento/circuito testado</label>
+        <input id="equipamento" type="text">
+      </div>
+      <div class="campo">
+        <label>Tensão de ensaio</label>
+        <select id="tensaoEnsaio">
+          <option>500 Vcc</option>
+          <option>1000 Vcc</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label>Fase-terra em MΩ</label>
+        <input id="faseTerra" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Fase-fase em MΩ</label>
+        <input id="faseFase" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Neutro-terra em MΩ</label>
+        <input id="neutroTerra" type="number" step="0.01">
+      </div>
+      <div class="campo">
+        <label>Condição do circuito</label>
+        <select id="condicao">
+          <option>Desenergizado e isolado</option>
+          <option>Cabo em teste</option>
+          <option>Circuito com suspeita de umidade</option>
+          <option>Carga sensível desconectada</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Observação</label>
+      <textarea id="observacao"></textarea>
+    </div>
+
+    <div class="botoes">
+      <button onclick="calcularDia06()">Interpretar</button>
+      <button onclick="salvarDia06()">Salvar</button>
+      <button onclick="window.print()">Imprimir/PDF</button>
+      <a href="../index.html" class="botao">Voltar</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado</h2>
+    <div id="resultado" class="resultado">Preencha os campos e clique em interpretar.</div>
+  </section>
+</main>
+
+<script src="../js/utils.js"></script>
+<script src="../js/dia06.js"></script>
+</body>
+</html>
